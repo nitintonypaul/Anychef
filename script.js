@@ -28,6 +28,9 @@ function getList() {
             let html = ""
             if (data.meals){
                 data.meals.forEach(meal => {
+                
+                //Removing the nothing page
+                mealList.classList.remove('nothing')
                 html += `
                     <div class="result-block">
                         <div class="result-image">
