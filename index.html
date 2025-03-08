@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Anychef</title>
+
+    <!--Google Fonts embed-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Climate+Crisis&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">    
+    
+    <!--Fontawesome embed-->
+    <script src="https://kit.fontawesome.com/395e50903c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--Header Element-->
+    <header>
+        <div id="branding">
+            <label id="brandingLabel">Anychef</label>
+        </div>
+        <div id="empty"></div>
+        <div id="github">
+            <a id="github-link" href="https://github.com/nitintonypaul"><i class="fa fa-github"></i></a>
+        </div>
+    </header>
+
+    <!--Body-->
+    <div id="face-page">
+
+        <!--Design element - Intro text-->
+        <div id="design-element">
+            YOUR INGREDIENTS, <br>YOUR RECIPE.
+        </div>
+
+        <!--Description of what this is-->
+        <div id="description-div">
+            No more guessing what to make! Just enter an ingredient, and we’ll instantly suggest recipes that fit your cravings.
+        </div>
+
+        <!--Input div containg searchbox and searchbutton-->
+        <div id="input-centering-div">
+            <div id="input-div">
+                <input type="text" id="searchbox" placeholder="What do you have at home?">
+                <button type="button" id="searchbutton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <!--Waves-->
+        <div id="wave-div">
+            <div id="wave1" class="wave"></div>
+            <div id="wave2" class="wave"></div>
+            <div id="wave3" class="wave"></div>
+        </div>
+    </div>
+    <div id="results-page">
+        
+        <div class="block-container" id="block-container">
+            <h1 class="block-heading">Here's what <a style="font-family: climate crisis;">Anychef</a> found for you:</h1>
+
+            <!--Each block-->
+            <div id="result">
+                <!-- result block format
+                <div class="result-block">
+                    <div class="result-image">
+                        <img src="test.png" class="image">
+                    </div>
+                    <div class="result-description">
+                        <div class="result-title"><h1 style="padding: 0px 10px;">Miso Soup</h1><a class="result-recipe" href="#">Get Recipe</a></div> 
+                        <a class="result-description">
+                            Miso soup is a traditional Japanese soup. Its base is dashi, an umami stock that's typically made with a mix of dried bonito flakes and dried kombu kelp. The soup is then flavored with miso, or fermented soybean paste. Numerous varieties of miso soup are made throughout Japan.</a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        
+        <!--Detailed view-->
+        <div class="detail-container">
+            <div>
+                <button class="close-button" id="close-button">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="detailed-stuff-container">
+                <!-- Detailed description format
+                <div class="detailed-image">
+                    <img src="anychef.png" class="detailed-image">
+                </div>
+
+                <div class="extras">
+                    <div class="detailed-title">
+                        <h1>Miso Soup</h1>
+                    </div>
+                    <div class="detailed-recipe">
+                        <h2>Recipe:</h2>
+                        <a>
+                            Place vegetable broth in a medium sauce pan and bring to a low simmer.
+                            In the meantime, place miso (starting with lesser end of range) into a small bowl, add a little hot water and whisk until smooth. This will ensure it doesn’t clump when added to the soup later. Set aside.
+                            To the broth add chard (or other greens of choice), green onion, and tofu (if using silken, add at the end of cooking) and cook for 5 minutes. Then add nori and stir. Remove from heat, add miso mixture, and stir to combine. 
+                            Taste and add more miso or a pinch of sea salt if desired. Serve warm. Best when fresh.                        </a>
+                    </div>
+                    <br><br>
+                    <div class="recipe-link-div">
+                        <a class="recipe-link" href="#">Watch video</a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

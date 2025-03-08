@@ -1,0 +1,554 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #1a1a1a;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+::selection {
+    color: #1a1a1a;
+    background: #F4F4E2;
+}
+/*Animations*/
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes step-fade-75 {
+    0% {opacity: 0;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes step-fade-50 {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes rise-fade {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(0);}
+}
+@keyframes wavy {
+    0% {background-position-x: 0;}
+    0% {background-position-x: 1000px;}
+}
+@keyframes wavy-reverse {
+    0% {background-position-x: 0;}
+    0% {background-position-x: -1000px;}
+}
+
+/*Face Page*/
+#face-page {
+    height: 88vh;
+    margin-bottom: 0;
+}
+header {
+    display: flex;
+    padding: 10px 0px;
+}
+
+#empty {
+    width: 80vw;
+}
+#branding {
+    width: 10vw;
+    text-align: center;
+    padding: 0px 10px;
+    justify-content: center;
+    align-items: center;
+    animation: step-fade-50 1s;
+    user-select: none;
+}
+#brandingLabel {
+    font-size: 2rem;
+    color: #F4F4E2;
+    font-family: Climate Crisis;
+}
+#github {
+    width: 10vw;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0px 10px;
+    justify-content: center;
+    align-items: center;
+    animation: step-fade-50 1.5s;
+}
+.fa-github {
+    color: #F4F4E2;
+    transition: box-shadow 0.1s;
+    border-radius: 50%;
+}
+.fa-github:hover {
+    box-shadow: 0px 0px 10px #F4F4E2;
+}
+#design-element {
+    font-family: climate crisis;
+    color: #F4F4E2;
+    font-size: 5rem;
+    text-align: center;
+    margin: 2% 0px;
+    animation: rise-fade 1.5s;
+    cursor: default;
+}
+#description-div {
+    font-family: figtree;
+    color: #F4F4E2;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0px 15%;
+    margin-bottom: 5%;
+    animation: rise-fade 1.7s;
+    cursor: default;
+}
+#input-centering-div {
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+}
+#input-div {
+    background-color: #565656;
+    border-radius: 2px;
+    display: flex;
+    width: fit-content;
+    border: #F4F4E2 2px solid;
+    border-radius: 200px;
+    animation: rise-fade 2s;
+    overflow: hidden;
+}
+#searchbox {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #F4F4E2;
+    font-family: figtree;
+    font-weight: 600;
+    caret-color: #F4F4E2;
+    font-size: 1.7rem;
+    width: 40vw;
+    padding: 10px 3%;
+    user-select: none;
+}
+#searchbox::placeholder {
+    transition: color 0.2s;
+}
+#searchbox:focus::placeholder {
+    color: transparent;
+}
+#searchbutton {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #F4F4E2;
+    font-family: figtree;
+    border-right: transparent 2px solid;
+    font-size: 1rem;
+    width: 5vw;
+    cursor: pointer;
+    border-radius: 1px;
+    transition: background-color 0.2s;
+}
+#searchbutton:hover {
+    background-color: #F4F4E2;
+    color: #565656;
+}
+/*Wave Effect*/
+#wave-div {
+    animation: fade 2s;
+}
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+#wave1 {
+    animation: wavy 30s linear infinite;
+    animation-delay: 0s;
+}
+#wave2 {
+    animation: wavy-reverse 20s linear infinite;
+    opacity: 0.7;
+    animation-delay: -2s;
+}
+#wave3 {
+    animation: wavy 10s linear infinite;
+    opacity: 0.2;
+    animation-delay: -5s;
+}
+
+/*Results Page*/
+#results-page {
+    background-color: #F4F4E2;
+    margin: 0 0;
+}
+.block-container {
+    padding: 10% 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.block-heading {
+    font-family: figtree;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 3rem;
+    padding: 10px 10px;
+    user-select: none;
+    text-align: center;
+}
+
+/*Result Block*/
+.result-block {
+    width: 70vw;
+    display: flex;
+    background-color: #1a1a1a;
+    color: #F4F4E2;
+    font-family: figtree;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 10px;
+    margin: 20px 0px;
+    box-shadow: 0px 0px 10px black;
+}
+.result-block:hover {
+    cursor: default;
+}
+.result-image {
+    user-select: none;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+.image {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+.result-title {
+    display: flex;
+    align-items: center;
+}
+.result-description {
+    margin: 10px 10px;
+}
+.result-recipe {
+    color: #F4F4E2;
+    font-size: 1rem;
+    border: #F4F4E2 2px solid;
+    border-radius: 20px;
+    padding: 5px 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-weight: 500;
+    margin: 0px 10px;
+    user-select: none;
+    text-align: center;
+}
+.result-recipe:hover {
+    background-color: #F4F4E2;
+    color: #1a1a1a;
+}
+
+/*Detailed view*/
+.detail-container {
+    display: none;
+}
+
+.detail-container-show {
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 25%;
+    left: 0%;
+    padding: 10px 10px;
+    margin: 0 100px;
+    border-radius: 10px;
+    font-family: figtree;
+    color: #F4F4E2;
+    box-shadow: 0px 0px 1000px black;
+
+    /*Display of detail container*/
+    display: inline;
+}
+.detailed-title {
+    font-size: 2rem;
+    padding: 0px 10px;
+}
+.close-button {
+    float: right;
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    color: #F4F4E2;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.1s;
+}
+.close-button:hover {
+    cursor: pointer;
+    background-color: #F4F4E2;
+    color: #1a1a1a;
+}
+.detailed-stuff-container {
+    display: flex;
+    align-items: center;
+}
+.detailed-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+.detailed-recipe {
+    padding: 0px 10px;
+    max-height: 30vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.extras {
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+.recipe-link-div {
+    padding: 0px 10px;
+}
+.recipe-link {
+    color: #F4F4E2;
+    font-size: 1rem;
+    border: #F4F4E2 2px solid;
+    border-radius: 20px;
+    padding: 6px 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-weight: 500;
+    user-select: none;
+}
+.recipe-link:hover {
+    background-color: #F4F4E2;
+    color: #1a1a1a;
+}
+.nothing {
+    font-family: climate crisis;
+    font-size: 5rem;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+/*Media Queries*/
+@media only screen and (max-width: 1100px) {
+    #design-element {
+        font-size: 4rem;
+    }
+    .detail-container {
+        background-color: #1a1a1a;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        margin: 50px 50px;
+        border-radius: 10px;
+        font-family: figtree;
+        color: #F4F4E2;
+        box-shadow: 0px 0px 1000px black;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #design-element {
+        font-size: 3rem;
+        padding: 5% 0;
+    }
+    #brandingLabel {
+        font-size: 1.7rem;
+    }
+    #description-div {
+        font-size: 1rem;
+    }
+    #searchbox {
+        font-size: 1rem;
+    }
+    .block-heading {
+        font-size: 2.2rem;
+    }
+    .result-block {
+        width: 80vw;
+    }
+
+    .detail-container {
+        background-color: #1a1a1a;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        margin: 50px 50px;
+        border-radius: 10px;
+        font-family: figtree;
+        color: #F4F4E2;
+        box-shadow: 0px 0px 1000px black;
+    }
+    .detailed-image {
+        width: 200px;
+        height: 200px;
+    }
+    .detailed-title {
+        font-size: 1.5rem;
+    }
+    .detailed-recipe h2 {
+        font-size: 1.3rem;
+    }
+    .detailed-recipe a {
+        font-size: 0.8rem;
+    }
+    .recipe-link {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:440px) {
+    #design-element {
+        font-size: 2rem;
+        padding-top: 10%;
+    }
+    #brandingLabel {
+        font-size: 1.2rem;
+    }
+    #github {
+        font-size: 1.5rem;
+    }
+    #description-div {
+        font-size: 0.8rem;
+    }
+    #searchbox {
+        font-size: 0.8rem;
+        width: 60vw;
+    }
+    #searchbutton {
+        width: 10vw;
+    }
+    .block-heading {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .result-block {
+        width: 90vw;
+    }
+    .image {
+        width: 100px;
+        height: 100px;
+    }
+    .result-title {
+        display: flex;
+        align-items: center;
+    }
+    .result-description h1{
+        margin: 10px 10px;
+        font-size: 1rem;
+    }
+    .result-description {
+        margin: 10px 10px;
+        font-size: 0.7rem;
+    }
+    .result-recipe {
+        color: #F4F4E2;
+        font-size: 0.7rem;
+        border: #F4F4E2 2px solid;
+        border-radius: 20px;
+        padding: 5px 5px;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        font-weight: 500;
+        margin: 0px 0px;
+        user-select: none;
+    }
+    .detailed-stuff-container {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    .detail-container {
+        background-color: #1a1a1a;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        margin: 20px 50px;
+        border-radius: 10px;
+        font-family: figtree;
+        color: #F4F4E2;
+        box-shadow: 0px 0px 1000px black;
+    }
+    .detailed-image {
+        width: 200px;
+        height: 200px;
+    }
+    .detailed-title {
+        font-size: 1.2rem;
+    }
+    .detailed-recipe h2 {
+        font-size: 1.1rem;
+    }
+    .detailed-recipe a {
+        font-size: 0.7rem;
+    }
+    .recipe-link {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width:376px) {
+    .result-description h1{
+        margin: 10px 10px;
+        font-size: 0.9rem;
+    }
+    .result-description {
+        margin: 10px 10px;
+        font-size: 0.6rem;
+    }
+    .result-recipe {
+        color: #F4F4E2;
+        font-size: 0.6rem;
+        border: #F4F4E2 2px solid;
+        border-radius: 20px;
+        padding: 5px 5px;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        font-weight: 500;
+        margin: 0px 0px;
+        user-select: none;
+    }
+    .detail-container {
+        background-color: #1a1a1a;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        margin: 20px 50px;
+        border-radius: 10px;
+        font-family: figtree;
+        color: #F4F4E2;
+        box-shadow: 0px 0px 1000px black;
+    }
+    .detailed-image {
+        width: 200px;
+        height: 200px;
+    }
+    .detailed-title {
+        font-size: 0.8rem;
+    }
+    .detailed-recipe h2 {
+        font-size: 0.8rem;
+    }
+    .detailed-recipe a {
+        font-size: 0.7rem;
+    }
+    .recipe-link {
+        font-size: 0.7rem;
+    }
+}
