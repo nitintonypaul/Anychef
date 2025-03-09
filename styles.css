@@ -1,6 +1,8 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 body {
     padding: 0;
@@ -49,7 +51,7 @@ body {
 /*Face Page*/
 #face-page {
     height: 88vh;
-    margin-bottom: 0;
+    padding: 0 0;
 }
 header {
     display: flex;
@@ -173,6 +175,7 @@ header {
     height: 100px;
     background: url(wave.png);
     background-size: 1000px 100px;
+    margin: 0 0;
 }
 #wave1 {
     animation: wavy 30s linear infinite;
@@ -412,6 +415,12 @@ header {
     .recipe-link {
         font-size: 0.8rem;
     }
+    .nothing {
+        font-family: climate crisis;
+        font-size: 4rem;
+        color: #1a1a1a;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width:440px) {
@@ -501,6 +510,12 @@ header {
     .recipe-link {
         font-size: 0.7rem;
     }
+    .nothing {
+        font-family: climate crisis;
+        font-size: 3rem;
+        color: #1a1a1a;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width:376px) {
@@ -550,5 +565,11 @@ header {
     }
     .recipe-link {
         font-size: 0.7rem;
+    }
+    .nothing {
+        font-family: climate crisis;
+        font-size: rem;
+        color: #1a1a1a;
+        text-align: center;
     }
 }
