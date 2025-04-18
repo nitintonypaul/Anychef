@@ -9,6 +9,8 @@ This project is implemented using **HTML**, **CSS**, and **JavaScript**, with no
 ## ⚠️ Disclaimer
 This project is a prototype developed exclusively for educational purposes and is not intended for production deployment. It does not represent a fully functional or validated application. Users are advised not to rely on this tool for actual cooking, recipe preparation, or dietary decisions.
 
+---
+
 ## 📌 Features
 
 - **Ingredient-Based Search**  
